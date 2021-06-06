@@ -73,7 +73,7 @@ numeric types via the `Into` trait:
 
 For deep learning, please use the quire types:
 
-```
+```rust
 use posit_rs::{Posit32, Quire32};
 
 fn main() {
