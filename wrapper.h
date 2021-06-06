@@ -1,27 +1,18 @@
-#include <softposit.h>
+#include "SoftPosit/source/include/softposit.h"
 
 // TODO: Extract the functions below to a separate source file
-// TODO: Use the negP and absP macros when they are fixed
+// TODO: Use the absP macros when they are fixed
 
 posit8_t p8_neg(posit8_t a) {
-  union ui8_p8 uA;
-  uA.p = a;
-  uA.ui = -uA.ui&0xFF;
-  return uA.p;
+  return negP8(a);
 }
 
 posit16_t p16_neg(posit16_t a) {
-  union ui16_p16 uA;
-  uA.p = a;
-  uA.ui = -uA.ui&0xFFFF;
-  return uA.p;
+  return negP16(a);
 }
 
 posit32_t p32_neg(posit32_t a) {
-  union ui32_p32 uA;
-  uA.p = a;
-  uA.ui = -uA.ui&0xFFFFFFFF;
-  return uA.p;
+  return negP32(a);
 }
 
 posit8_t p8_abs(posit8_t a) {
